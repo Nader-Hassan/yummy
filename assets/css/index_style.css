@@ -1,0 +1,287 @@
+*
+{
+    padding:0;
+    margin:0;
+    text-decoration: none !important;
+    box-sizing: border-box;
+    
+}
+body
+{
+    background-color:#0D0D0D ;
+}
+.edit-input
+{
+    background-color: transparent !important;
+    color:white !important;
+    box-shadow: none !important;
+    margin:10px ;
+}
+.homeItems
+{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.areapointer
+{
+cursor: pointer;
+}
+.layer
+{
+    border: 1px solid #0D0D0D;
+    padding: 20px;
+    margin-top : 30px; 
+    position: relative;
+    z-index: 9;
+    box-shadow: 1px 0px 10px black;
+}
+.ingredientslayer
+{
+    border: 1px solid #0D0D0D;
+    padding: 20px;
+    margin-top : 30px; 
+    position: relative;
+    z-index: 9;
+    box-shadow: 1px 0px 10px black;
+    height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+    
+}
+.textgreen
+{
+    color:#6E9E3A;
+}
+.homeItems .row img
+{
+    width:100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.overlay
+{
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    position: absolute;
+    top:100%;
+    bottom:0;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+    transition: all 0.7s ease-in-out;
+    overflow: hidden;
+
+}
+.overlay h2
+{
+    display: none;
+}
+.home:hover .overlay
+{
+    top:0%;
+}
+.home:hover .overlay h2
+{
+    display: block;
+}
+.overlay2
+{
+    background-color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    position: absolute;
+    top:100%;
+    bottom:0;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+    transition: all 0.7s ease-in-out;
+    overflow: hidden;
+}
+.layer:hover .overlay2
+{
+    top:0%;
+}
+.borderr
+{
+    border: 1px solid #D4EDDA;
+    background-color: #D4EDDA;
+    padding: 5px;
+    border-radius: 10px;
+}
+.recipes 
+{
+    margin-top: 20px;
+    color: black;  
+}
+.borderr2
+{
+    border: 1px solid #F8D7DA;
+    background-color: #F8D7DA;
+    padding: 5px;
+    border-radius: 10px;
+}
+.tags
+{
+ 
+    color: black;  
+}
+.searchinputs , .contactinputs
+{
+    display: none;
+}
+.loading
+{
+    background-color: black;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:0;
+    z-index: 999999999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader {
+    position: relative;
+    width: 120px;
+    height: 14px;
+    border-radius: 0 0 15px 15px;
+    background-color: #3e494d;
+    box-shadow: 0 -1px 4px #5d6063 inset;
+    animation: panex 0.5s linear alternate infinite;
+    transform-origin: 170px 0;
+    z-index: 10;
+    perspective: 300px;
+
+}
+.loader::before {
+  content: '';
+  position: absolute;
+  left: calc( 100% - 2px);
+  top: 0;
+  z-index: -2;
+  height: 10px;
+  width: 70px;
+  border-radius: 0 4px 4px 0;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(#6c4924, #4b2d21), linear-gradient(#4d5457 24px, transparent 0), linear-gradient(#9f9e9e 24px, transparent 0);
+  background-size: 50px 10px , 4px 8px , 24px 4px;
+  background-position: right center , 17px center , 0px center;
+}
+  .loader::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: -2;
+    transform: translate(-50% , -20px) rotate3d(75, -2, 3, 78deg);
+    width: 55px;
+    height: 53px;
+    background: #fff;
+    background-image:
+    radial-gradient(circle 3px , #fff6 90%, transparent 10%),
+    radial-gradient(circle 12px , #ffc400 90%, transparent 10%),
+    radial-gradient(circle 12px , #ffae00 100%, transparent 0);
+    background-repeat: no-repeat;
+    background-position: -4px -6px , -2px -2px , -1px -1px;
+    box-shadow: -2px -3px #0002 inset, 0 0 4px #0003 inset;
+    border-radius: 47% 36% 50% 50% / 49% 45% 42% 44%;
+    animation: eggRst 1s ease-out infinite;
+  }
+
+@keyframes eggRst {
+  0% ,  100%{  transform: translate(-50%, -20px) rotate3d(90, 0, 0, 90deg); opacity: 0; }
+  10% , 90% {  transform: translate(-50%, -30px) rotate3d(90, 0, 0, 90deg); opacity: 1; }
+  25%  {transform:  translate(-50% , -40px) rotate3d(85, 17, 2, 70deg) }
+  75% {transform:  translate(-50% , -40px) rotate3d(75, -3, 2, 70deg) }
+  50% {transform:  translate(-55% , -50px) rotate3d(75, -8, 3, 50deg) }
+}
+@keyframes panex {
+  0%{  transform: rotate(-5deg)  }
+  100%{  transform: rotate(10deg)  }
+}
+::-webkit-scrollbar {
+    display: none;
+}
+/* ========================================================================================= */
+.nav-bar
+{
+    position: fixed;
+    background-color: #000;
+    width: 0px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    z-index: 999;
+   
+}
+.nav-bar h4 
+{
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 15px 0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.nav-bar h4:hover
+{
+    color: #CB3140;
+}
+.nav-icons p
+{
+    font-size: 16px;
+    color: #999;
+    text-align: left;
+    padding-right: 60px;
+}
+.nav-icons i
+{
+    font-size: 14px;
+    padding:0 5px ;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.nav-links , .nav-icons
+{
+    display: none;
+}
+.menu
+{
+    position: fixed;
+    background-color:white ;
+    top: 0;
+    bottom: 0;
+    left: 0px; /*210px*/
+    width: 60px;
+    z-index: 9999999;
+}
+.menu img
+{
+    transform: translate(10px , 20px);
+    cursor: pointer;
+}
+.menu i 
+{
+    font-size: 20px;
+    cursor: pointer;
+}
+.delay2
+{
+    animation-delay: 0.3s;
+}
+.delay3
+{
+    animation-delay: 0.6s;
+}
+.delay4
+{
+    animation-delay: 0.9s;
+}
+.delay5
+{
+    animation-delay: 1.2s;
+}
